@@ -1,0 +1,179 @@
+body{
+    background-color: rgb(255, 255, 255);
+    background-image: url(images/fondohtml.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.letras-oferta{
+    padding: 10px;
+    margin: 10px;  
+    background-color: rgba(69, 149, 214, 0.411);
+    border: 2px solid blue;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    justify-content:center ;
+    box-shadow: 0px 5px 20px 0px black;
+    width: auto;
+}
+
+.cupon {
+    text-align: center;
+}
+
+.container{
+    background-color: rgb(0, 66, 129, 0.800);
+    border: 2px solid rgb(1, 59, 180);
+    border-radius: 5px;
+    box-shadow: 0px  5px 10px 0px rgb(69, 149, 214);
+
+    display: grid;
+    grid-template-columns: 130px 300px 300px 0px 110px 90px 90px 110px auto 110px;
+    grid-template-rows: 10px auto;
+    color: white;
+    
+}
+.gridbox{   
+    text-align: center ;
+    font-size: 15px;
+}
+.element-1{
+ 
+    grid-column-start: 1/2;
+}
+.element-3{
+    padding: 5%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+   text-align: center;
+}
+
+.element-4{
+    grid-column-start: 5;
+}
+.element-5{
+    grid-column-start: 6;
+}
+.element-6{
+    grid-column-start: 7;
+}
+.element-7{
+    grid-column-start: 8;
+}
+.element-8{
+    grid-column-start: 9;
+}
+.element-9{
+    grid-column-start: 10;
+}
+
+
+input{
+    color: rgb(250, 250, 250);
+    background-color: rgb(69, 149, 214);
+    border-radius: 5px;
+    border-color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+input:hover{
+    box-shadow: 0px 2px 5px 0px rgb(255, 255, 255);
+}
+.container p:hover{
+    border-radius: 5px;
+    background-color: rgb(69, 149, 214);
+    box-shadow: 0px 1px 5px 0px rgb(244, 244, 245);
+    cursor: pointer;
+}
+.logo{
+    position: fixed;
+    bottom: 50px; right: 20px;
+}
+.flexcontainer{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.letras{
+    padding: 20px;
+    margin: 20px;  
+    background-color: rgba(69, 149, 214, 0.411);
+    border: 2px solid blue;
+    border-radius: 10px;
+    text-align: center;
+    justify-content:center ;
+    box-shadow: 0px 5px 20px 0px black;
+    width: 650px;
+
+}
+.flexcontainer2{
+    padding-bottom: 20px;
+    margin: auto;
+    justify-content: center;
+    font-size: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.redes {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.Instagram {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.X {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.Facebook {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.Tiktok {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.youtube {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+
+.flecha {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.twitch {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.links-cabecera {
+    color: white; 
+    text-decoration: none;
+}

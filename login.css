@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+
+    height: 100vh;
+    background-image: url(images/fondohtml.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+
+.form-item {
+    width: 100%;
+}
+
+
+.round-corners {
+    border-radius: var(--border-radius);
+}
+
+#user-form {
+    background-color: rgb(69, 149, 214, 0.411);
+    padding: max(55px, 15px);
+    width: min(350px, 275px);
+    margin:10% auto;
+    box-shadow: 0 0 20px rgba(5, 50, 50, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid blue;
+    box-shadow: 0px 5px 20px 0px black; 
+}
+
+.form-input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 7px;
+    margin: 10px 0;
+    border: 1px solid silver;
+    outline-color: dodgerblue;
+}
+
+#form-submit {
+    width: 100%;
+    padding: 10px;
+    margin-top: center;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 200ms;
+}
+
+#form-submit:hover {
+    background-color: royalblue;
+}
+
+#switch-form p {
+    font-size: 15px; 
+    margin: 10px;
+}
+
+.contenedor {
+    padding-top: 0px;
+    padding-bottom: 40px;
+}
+
+.enlace a {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 7px;
+    margin: 10px 0px;
+    border: 1px solid silver;
+    outline-color: dodgerblue;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}

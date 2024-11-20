@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>inicio de sesion - ZenCLoud</title>
+        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="shortcut icon" type="image/x-icon" href="images/zencloud-logo.png">
+    </head>
+
+    <body>        
+        <!--Encabezado-->
+        <div class="container">
+            <div class="gridbox element-1">
+                <img class="imagennnte" width="54px"  src="images/zencloud-logo.png">
+            </div>
+            <div class="gridbox element-3">
+                <input type="text" placeholder="¿Que necesitas?" >
+                <input type="button" value="Buscar" >
+            </div>
+            <div class="gridbox element-4">
+            </div>
+            <div class="gridbox element-5">
+            </div>
+            <div class="gridbox element-6">
+            </div>
+            <div class="gridbox element-7">
+            </div>
+            <div class="gridbox element-8">
+            </div>
+            <div class="gridbox element-9">
+                <p><a href="index.html" class="links-cabecera">Volver</a></p>
+            </div>
+        </div>
+        <!--login-->
+        <form id="user-form" class="round-corners">
+            <div class="contenedor">
+                <img src="images/logo zencloud oscuro.png" alt="zencloud" style="width:150px;height:150px;">
+            </div>
+            <div class="form-item">
+                <label for="user-email">Correo electrónico:</label>
+                <input id="user-email" class="form-input round-corners" type="email" name="email" required>
+            </div>
+            <div class="form-item">
+                <label for="user-password">Contraseña:</label>
+                <input id="user-password" class="form-input round-corners" type="password" name="password" required>
+            </div>
+            <div class="form-item">
+                <input type="checkbox" id="remember-me" name="remember-me">
+                <label for="remember-me">Recuérdame</label>
+                <a href="index-user.html">
+                    <input id="form-submit" class="form-item round-corners" type="button"  value="Iniciar sesion">
+                </a>
+                <div id="switch-form">
+                <p>¿No tienes una cuenta? <a class="text-link" href="register.html">Regístrate</a></p>
+            </div>
+        </form>
+    </body>
+</html>

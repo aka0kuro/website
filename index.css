@@ -1,0 +1,279 @@
+body{
+    background-color: rgb(255, 255, 255);
+    background-image: url(images/fondohtml.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    background-color: rgb(0, 66, 129, 0.800);
+    border: 2px solid rgb(1, 59, 180);
+    border-radius: 5px;
+    box-shadow: 0px  5px 10px 0px rgb(69, 149, 214);
+
+    display: grid;
+    grid-template-columns: 130px 300px 300px 0px 110px 90px 90px 110px auto 110px;
+    grid-template-rows: 10px auto;
+    color: white;
+    
+}
+.gridbox{   
+    text-align: center ;
+    font-size: 15px;
+}
+.element-1{
+ 
+    grid-column-start: 1/2;
+}
+.element-3{
+    padding: 5%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+   text-align: center;
+}
+
+.element-4{
+    grid-column-start: 5;
+}
+.element-5{
+    grid-column-start: 6;
+}
+.element-6{
+    grid-column-start: 7;
+}
+.element-7{
+    grid-column-start: 8;
+}
+.element-8{
+    grid-column-start: 9;
+}
+.element-9{
+    grid-column-start: 10;
+}
+
+
+input{
+    color: rgb(250, 250, 250);
+    background-color: rgb(69, 149, 214);
+    border-radius: 5px;
+    border-color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+input:hover{
+    box-shadow: 0px 2px 5px 0px rgb(255, 255, 255);
+}
+.container p:hover{
+    border-radius: 5px;
+    background-color: rgb(69, 149, 214);
+    box-shadow: 0px 1px 5px 0px rgb(244, 244, 245);
+    cursor: pointer;
+}
+.logo{
+    position: fixed;
+    bottom: 50px; right: 20px;
+}
+.flexcontainer{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.letras{
+    padding: 20px;
+    margin: 20px;  
+    background-color: rgba(69, 149, 214, 0.411);
+    border: 2px solid blue;
+    border-radius: 10px;
+    text-align: center;
+    justify-content:center ;
+    box-shadow: 0px 5px 20px 0px black;
+    width: 650px;
+
+}
+.flexcontainer2{
+    padding-bottom: 20px;
+    margin: auto;
+    justify-content: center;
+    font-size: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexcontainer3{
+    padding-bottom: 20px;
+    margin: auto;
+    justify-content: center;
+    font-size: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h4:hover{
+    background-color: rgb(90, 90, 255);
+    transition: background-color 2s ;
+}
+h4{  
+    margin: 5px;
+    text-align: center;
+    background-color: rgb(57, 140, 223, 0.411);
+    border: 2px solid rgb(4, 126, 191);
+    border-radius: 5px;
+    box-shadow: 0px 2px 20px 0px black;
+    width: 300px;   
+}
+.flexnintendos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.flexi{
+    padding: 2%;
+    margin: 2%;
+    justify-content: center;
+    background-color: rgb(69, 149, 214, 0.411);
+    border: 2px solid blue;
+    border-radius: 25px;
+    box-shadow: 0px 2px 20px 0px black;
+    text-align: center;
+}
+.flexi:hover{
+    transform: scale(1.20);
+    background-color: rgba(0, 255, 213, 0.658);
+    transition: background-color 2s;
+}
+.precios{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.flexo{
+    padding: 5px;
+    margin: 40px;
+    justify-content: center;
+
+    background-color: rgb(69, 149, 214, 0.411);
+    border: 2px solid blue;
+    border-radius: 25px;
+    box-shadow: 0px 2px 20px 0px black;
+
+    text-align: center;
+    width: 160px;
+}
+.flexo:hover{
+    background-color: rgba(0, 255, 13, 0.658);
+    transition: background-color 1s;    
+}
+.ethazi{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.flexe{
+    padding: 1%;
+    margin: 2%;
+    justify-content: center;
+    background-color: rgb(69, 149, 214, 0.411);
+    border: 2px solid blue;
+    border-radius: 50px;
+    box-shadow: 0px 5px 30px 0px black;
+    text-align: center;
+    width: 280px;
+}
+.flexe:hover{
+    background-color: rgba(0, 255, 213, 0.658);
+    transition: background-color 2s;
+}
+.col{
+    margin: 30px;
+    display: grid;
+    grid-template-columns: auto 610px auto;
+}
+.nulo-1{
+    grid-column-start: 2;
+}
+table {
+    margin: auto;
+    width: 50%;
+    border-spacing: 10px;
+}
+
+th, td {
+    border-radius: 10px;
+    border: 2px solid blue;
+    padding: 30px;
+    text-align: center;
+    font-size: 25px;
+    box-shadow: 0px 5px 5px 0px black;
+}
+
+th {background-color: white;}
+
+.vacio th {
+    box-shadow: none;
+    background-color: rgba(3, 142, 255, 0);
+    border-radius: none;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+}
+
+.redes {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.Instagram {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.X {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.Facebook {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.Tiktok {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.youtube {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+
+.flecha {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.twitch {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.links-cabecera {
+    color: white; 
+    text-decoration: none;
+}
