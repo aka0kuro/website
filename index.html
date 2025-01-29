@@ -1,179 +1,299 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZenCloud</title>
-    <link rel="stylesheet" href="index.css">
+    <title>ZenCloud - Plataforma de Cloud Gaming</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/zencloud-logo.png">
+    <style>
+        :root {
+            --primary-color: #002b5b;
+            --secondary-color: #ff6600;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bg-color);
+            padding-top: 80px;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section-header {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .emulator-card {
+            transition: transform 0.3s ease;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #ffffff;
+            padding: 20px;
+        }
+		.emulator-card img {
+			width: 100%;
+			height: 200px;
+			object-fit: contain;
+			padding: 15px;
+		}
+
+		.emulator-card .card-body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			min-height: 120px;
+		}
+
+        .emulator-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .price-card {
+            border: 2px solid var(--primary-color);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .price-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary-color);
+        }
+
+        .about-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 40px;
+        }
+    </style>
 </head>
 <body>
-    <a name="arriba"></a>
-    <!--Encabezado-->
-    <div class="container">
-        <div class="gridbox element-1">
-            <img class="imagennnte" width="54px"  src="images/zencloud-logo.png">
-        </div>
-        <div class="gridbox element-3">
-            <input type="text" placeholder="¿Que necesitas?" >
-            <input type="button" value="Buscar" >
-        </div>
-        <div class="gridbox element-4">
-            <p><a href="#participantes" class="links-cabecera">Participantes</a></p>
-        </div>
-        <div class="gridbox element-5">
-            <p><a href="#precios" class="links-cabecera">Precios</a></p>
-        </div>
-        <div class="gridbox element-6">
-            <p><a href="#contacto" class="links-cabecera">Contacto</a></p>
-        </div>
-        <div class="gridbox element-7">
-            <p><a href="login.html" class="links-cabecera">Iniciar sesion</a></p>
-        </div>
-        <div class="gridbox element-8">
-            <p><a href="ofertas.html" class="links-cabecera">Black Friday</a></p>
-        </div>
-    </div>
-    <div class="logo">
-        <a href="#arriba"><img width="60px" src="images/flecha.png" alt=""
-                onmouseover="this.src='images/flecha-blanco.png';"
-                onmouseout="this.src='images/flecha.png';"></a>
-    </div>
-    <div class="flexcontainer">
-        <div class="letras">
-             <div>
-                <h1>¿Quienes Somos?</h1>
-            </div>
-            <div>
-                <p>Somos una empresa dedicada al cloud gaming, demostramos una seriedad y un compromiso con nuestros clientes diferenciándonos de los demás competidores, llevamos poco en el mercado, pero nuestra catalogo de videojuegos es extenso y surtido tenemos en nuestro catálogo juegos retro y juegos de actualidad, pudiendo jugar desde un pecio económico a un gran surtido de juegos.</p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/zencloud-logo.png" alt="Logo" width="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#quienes-somos">Quiénes Somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plataformas">Plataformas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#precios">Planes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+                    <li class="nav-item"><a class="btn btn-danger ms-2" href="login.html">Iniciar sesión</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="flexcontainer2">
-        <div>
-            <h4>Emuladores Disponibles</h4>
-        </div>
-    </div>
-    <!--Catalogo-->
-    <div class="flexnintendos">
-        <div class="flexi">
-            <img width="200px" style="padding-top: 55px;" src="images/PlayStation_2.png" alt="">
-        </div>
-        <div class="flexi">
-            <img width="200px" src="images/Playstation.png" alt="">
-        </div>
-        <div class="flexi">
-            <img width="200px" style="padding-top: 55px;" src="images/nitendones-removebg-preview.png" alt="">
-        </div>
-        <div class="flexi">
-            <img width="200px" src="images/Nintendo64.png" alt="">
-        </div> 
-    </div>
-    <!--Precios-->
-    <div class="flexcontainer2">
-        <a name="precios"></a>
-        <div>
-            <h4>Precios</h4>
-        </div>
-    </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Plan</th>
-                <th>Precio</th>
-            </tr>
-            <tr>
-                <td>24 Horas</td>
-                <td>$2,5/Dia</td>
-            </tr>
-            <tr>
-                <td>Mensual</td>
-                <td>$15/Mes</td>
-            </tr>
-            <tr>
-                <td>Anual</td>
-                <td>$150/Mes</td>
-            </tr>
-        </thead>
-    </table>
-    <br>
-    <div class="flexcontainer2">
-        <a name="participantes"></a>
-        <div>
-            <h4>Participantes</h4>
-        </div>
-    </div>
-    <!--Empleados-->
-    <div class="ethazi">
+    </nav>
 
-        <div class="flexe">
-           <img width="200px" src="images/persona.png" alt="">
-           <h1>Alex Xabier</h1>
-           <p>Coordinador</p>
+    <!-- Sección Quiénes Somos -->
+    <section id="quienes-somos" class="container py-5">
+        <div class="about-section">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="section-header mb-4">¿Quiénes Somos?</h1>
+                    <p class="lead fs-5">
+                        En ZenCloud, revolucionamos el mundo del gaming llevando la experiencia a la nube. 
+                        Fundada en 2023 por apasionados de los videojuegos, ofrecemos acceso instantáneo a 
+                        más de 500 títulos clásicos y modernos. Nuestra tecnología de streaming de última 
+                        generación permite jugar en cualquier dispositivo sin necesidad de hardware costoso.
+                        <br><br>
+                        Con servidores optimizados y latencia ultra baja, garantizamos una experiencia de 
+                        juego suave y responsive. ¡Únete a nuestra comunidad de más de 50,000 jugadores 
+                        satisfechos y lleva tu pasión al siguiente nivel!
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="flexe">
-            <img width="200px" src="images/persona.png" alt="">
-            <h1>Yulian David</h1>
-           <p>Secretario</p>
+    </section>
+
+    <!-- Sección Plataformas Disponibles -->
+   <section id="plataformas" class="container py-5">
+    <h2 class="section-header text-center mb-5">Plataformas Disponibles</h2>
+    <div class="row g-4 justify-content-center">
+        <!-- PlayStation Classic -->
+        <div class="col-md-3 col-sm-6 d-flex">
+            <div class="card emulator-card w-100">
+                <img src="images/Playstation.png" class="align-self-center" alt="PlayStation">
+                <div class="card-body">
+                    <h5 class="card-title text-center">PlayStation Classic</h5>
+                    <p class="text-muted text-center mb-0">+150 juegos disponibles</p>
+                </div>
+            </div>
         </div>
-        <div class="flexe">
-            <img width="200px" src="images/persona.png" alt="">
-            <h1>Ganeko</h1>
-           <p>R.recursos</p>
+
+        <!-- Super Nintendo -->
+        <div class="col-md-3 col-sm-6 d-flex">
+            <div class="card emulator-card w-100">
+                <img src="images/supernitendo-removebg-preview.png" class="align-self-center" alt="Super Nintendo">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Super Nintendo</h5>
+                    <p class="text-muted text-center mb-0">+120 juegos clásicos</p>
+                </div>
+            </div>
         </div>
-        <div class="flexe">
-            <img width="200px" src="images/persona.png" alt="">
-            <h1>David</h1>
-           <p>Portavoz</p>
-        </div> 
+
+        <!-- PlayStation Portable -->
+        <div class="col-md-3 col-sm-6 d-flex">
+            <div class="card emulator-card w-100">
+                <img src="images/psp.png" class="align-self-center" alt="PSP">
+                <div class="card-body">
+                    <h5 class="card-title text-center">PlayStation Portable</h5>
+                    <p class="text-muted text-center mb-0">+90 juegos portátiles</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nintendo 64 -->
+        <div class="col-md-3 col-sm-6 d-flex">
+            <div class="card emulator-card w-100">
+                <img src="images/Nintendo64.png" class="align-self-center" alt="Nintendo 64">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Nintendo 64</h5>
+                    <p class="text-muted text-center mb-0">+80 juegos icónicos</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <!--Ubicacion-->
-    <div class="flexcontainer2">
-        <div>
-            <h4>Ubicacion</h4>
-        </div>
-    </div>
-    <div class="col">
-        <div class="nulo-1">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.784265041237!2d-2.9945302233837476!3d43.297839375341404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e5a7182d6d637%3A0x11b049579ff74048!2sC.%20Juntas%20Generales%2C%2042%2C%20Santa%20Teresa%2C%2048901%20Baracaldo%2C%20Vizcaya!5e0!3m2!1ses!2ses!4v1729765208447!5m2!1ses!2ses" width="600" height="400" style="border: 3px solid blue; border-radius: 30px; box-shadow: 0px 5px 20px 0px black;"></iframe>
-        </div>
-    </div>
-       <!--Contacto-->
-       <div class="flexcontainer3">
-        <div>
-            <a name="contacto"></a>
-            <h4>Contacto</h4>
-        </div>
-    </div>
-        <nav>
-            <div class="redes"><a name="contacto"></a>
-                <div class="Instagram">
-                    <a href="https://www.instagram.com/_zen_cloud_?igsh=MXExN216aXU0c2d4Zw%3D%3D">
-                        <img width="50px" src="images/instagram.jpg" alt="" onmouseover="this.src='images/instagram-blanco.jpg';"
-                            onmouseout="this.src='images/instagram.jpg';">
-                    </a>
+    <!-- Planes de Precios -->
+    <section id="precios" class="container py-5 bg-light">
+        <h2 class="section-header text-center mb-5">Planes de Suscripción</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="card price-card h-100">
+                    <div class="card-body text-center py-4">
+                        <h3 class="card-title mb-3">Básico</h3>
+                        <div class="display-4 mb-3 text-primary">
+                            <span class="fs-1">$2.5</span>
+                            <span class="fs-5">/día</span>
                         </div>
-                <div class="X">
-                    <a href="https://x.com/ZenClolud">
-                        <img width="50px" src="images/x.png" alt="" onmouseover="this.src='images/x-blanco.png';"
-                            onmouseout="this.src='images/x.png';">
-                    </a>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2">✔ Acceso 24 horas</li>
+                            <li class="mb-2">✔ 2 dispositivos simultáneos</li>
+                            <li class="mb-2">✔ Soporte básico</li>
+                            <li class="text-muted">✖ Guardado en la nube</li>
+                        </ul>
+					<button class="btn btn-primary btn-lg w-100" onclick="window.location.href='login.html'">Elegir Plan</button>                    </div>
                 </div>
-                <div class="twitch">
-                    <a href="https://www.twitch.tv/zencloud_">
-                        <img width="50px" src="images/twitch.png" alt="" onmouseover="this.src='images/twitch-blanco.png';"
-                            onmouseout="this.src='images/twitch.png';">
-                    </a>
-                </div>
-                <a href="https://www.youtube.com/@zen_cloud">
-                    <div class="youtube">
-                        <img width="50px" src="images/youtube.png" alt="" onmouseover="this.src='images/youtube-blanco.png';"
-                            onmouseout="this.src='images/youtube.png';">
-                </a>
-                    </div>
-
             </div>
-        </nav>
-    </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card price-card h-100 border-primary">
+                    <div class="card-body text-center py-4">
+                        <h3 class="card-title mb-3">Premium</h3>
+                        <div class="display-4 mb-3 text-primary">
+                            <span class="fs-1">$15</span>
+                            <span class="fs-5">/mes</span>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2">✔ Acceso ilimitado</li>
+                            <li class="mb-2">✔ 4 dispositivos simultáneos</li>
+                            <li class="mb-2">✔ Guardado en la nube</li>
+                            <li class="mb-2">✔ Soporte prioritario</li>
+                        </ul>
+					<button class="btn btn-primary btn-lg w-100" onclick="window.location.href='login.html'">Elegir Plan</button>                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card price-card h-100">
+                    <div class="card-body text-center py-4">
+                        <h3 class="card-title mb-3">Anual</h3>
+                        <div class="display-4 mb-3 text-primary">
+                            <span class="fs-1">$150</span>
+                            <span class="fs-5">/año</span>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2">✔ Todos beneficios Premium</li>
+                            <li class="mb-2">✔ 6 dispositivos simultáneos</li>
+                            <li class="mb-2">✔ Contenido exclusivo</li>
+                            <li class="mb-2">✔ Descuento 20%</li>
+                        </ul>
+					<button class="btn btn-primary btn-lg w-100" onclick="window.location.href='login.html'">Elegir Plan</button>                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo -->
+    <section id="equipo" class="container py-5">
+        <h2 class="section-header text-center mb-5">Nuestro Equipo</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-3 col-sm-6">
+                <div class="card team-card">
+                    <img src="images/persona.png" class="card-img-top" alt="Alex Xabier">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Alex Xabier</h5>
+                        <p class="text-muted mb-1">Coordinador General</p>
+                        <small class="text-primary">Experiencia: 10 años en gaming</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card team-card">
+                    <img src="images/persona.png" class="card-img-top" alt="Yulian David">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Yulian David</h5>
+                        <p class="text-muted mb-1">Director Técnico</p>
+                        <small class="text-primary">Experto en infraestructura cloud</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card team-card">
+                    <img src="images/persona.png" class="card-img-top" alt="Ganeko">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ganeko</h5>
+                        <p class="text-muted mb-1">Jefe de Recursos</p>
+                        <small class="text-primary">Gestión de comunidades</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card team-card">
+                    <img src="images/persona.png" class="card-img-top" alt="David">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">David</h5>
+                        <p class="text-muted mb-1">Jefe de Marketin</p>
+                        <small class="text-primary">Portavoz</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <h3 class="mb-4">Conéctate con Nosotros</h3>
+            <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
+                <a href="#" class="text-white fs-4"><i class="fab fa-instagram mx-2"></i></a>
+                <a href="#" class="text-white fs-4"><i class="fab fa-twitter mx-2"></i></a>
+                <a href="#" class="text-white fs-4"><i class="fab fa-facebook mx-2"></i></a>
+                <a href="#" class="text-white fs-4"><i class="fab fa-tiktok mx-2"></i></a>
+                <a href="#" class="text-white fs-4"><i class="fab fa-youtube mx-2"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2024 ZenCloud. Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
